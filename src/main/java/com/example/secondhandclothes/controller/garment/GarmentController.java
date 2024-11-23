@@ -37,7 +37,7 @@ public class GarmentController {
     }
 
     @GetMapping("/clothes/{id}")
-    public ResponseEntity<GarmentResponseModel> getAllGarments(@PathVariable Long id) {
+    public ResponseEntity<GarmentResponseModel> getById(@PathVariable Long id) {
         return ResponseEntity.ok(garmentService.getById(id));
     }
 
