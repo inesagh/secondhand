@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+        MYSQL_DATABASE: secondhand
+        MYSQL_ROOT_PASSWORD: secret
+        MYSQL_USER: user
+        MYSQL_PASSWORD: password
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/data/db
+
+volumes:
+  db:
+    driver:
+      local
